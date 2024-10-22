@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package zakat.modifikasi;
+import java.util.Scanner;
+
+public class ZakatModifikasi {
+
+ public static void main(String[] args) {
+       
+        Scanner input = new Scanner(System.in);
+        double syarat = 3*5000;
+        String pilih;
+        /*Perulangan untuk melakukan beberapa kali perhitungan Zakat mall*/
+        do{
+        System.out.println("Masukkan Jumlah uang (bentuk desimal)= ");
+        double Harta = input.nextDouble();
+        /*Kondisi saat user tidak memenuhi syarat untuk membayar zakat mall*/
+        if (Harta >= syarat){ 
+        double zakatMall = Harta *2.5/100;
+        System.out.println("Jumlah zakat mall yang harus dibayarkan sejumlah = Rp. " +zakatMall);    
+        } else {
+            System.out.println("Kumpulin Uang Dulu");
+        }
+        
+        System.out.println("Apakah ingin mengulangi perhitungan? (y/n): ");
+        pilih = input.next();
+        } while (pilih.equalsIgnoreCase("y"));
+        System.out.println("perhitungan Zakat mall selesai");
+        }
+    
+}
